@@ -1,0 +1,1 @@
+\COPY (SELECT * FROM crs_current WHERE year = 2021 AND category = 10 AND (LOWER(project_title) LIKE '%housing%' OR LOWER(short_description) LIKE '%housing%' OR LOWER(long_description) LIKE '%housing%')) TO 'data/housing_search_2021.csv' WITH CSV HEADER;
